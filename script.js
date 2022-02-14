@@ -27,7 +27,7 @@ const circleChanger = function () {
   circle.style.width = inputTypeRange.value + '%';
   circle.style.height = inputTypeRange.value + '%';
   rangeSpan.textContent = inputTypeRange.value + '%';
-} 
+}; 
 inputTypeRange.addEventListener('input', circleChanger);
   
 
