@@ -1,17 +1,18 @@
 'use strict';
 
 const inputTypeText = document.getElementById('text');
-const btn = document.getElementById('btn');
+const square = document.getElementById('square');
 const circleBtn = document.getElementById('e_btn');
 const inputTypeRange = document.getElementById('range');
 const circle = document.getElementById('circle');
+const rangeSpan = document.getElementById('range-span');
 
 
 
 
 // 1 пункт
 const changeColor = function () {
-  btn.style.backgroundColor = inputTypeText.value;
+  square.style.backgroundColor = inputTypeText.value;
 };
 btn.addEventListener('click', changeColor);
 
@@ -25,8 +26,9 @@ circleBtn.addEventListener('click', hideCircleBtn);
 const circleChanger = function () {
   circle.style.width = inputTypeRange.value + '%';
   circle.style.height = inputTypeRange.value + '%';
+  rangeSpan.textContent = inputTypeRange.value + '%';
 } 
-inputTypeRange.addEventListener('change', circleChanger);
+inputTypeRange.addEventListener('input', circleChanger);
   
 
 
