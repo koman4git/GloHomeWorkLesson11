@@ -21,7 +21,7 @@ const hideCircleBtn = function () {
   circleBtn.style.display = 'none';
 };
 circleBtn.addEventListener('click', hideCircleBtn);
-
+rangeSpan.textContent = inputTypeRange.value + '%';
 // 3 пункт
 const circleChanger = function () {
   circle.style.width = inputTypeRange.value + '%';
