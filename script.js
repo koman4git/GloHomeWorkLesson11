@@ -7,9 +7,6 @@ const inputTypeRange = document.getElementById('range');
 const circle = document.getElementById('circle');
 const rangeSpan = document.getElementById('range-span');
 
-
-
-
 // 1 пункт
 const changeColor = function () {
   square.style.backgroundColor = inputTypeText.value;
@@ -21,13 +18,14 @@ const hideCircleBtn = function () {
   circleBtn.style.display = 'none';
 };
 circleBtn.addEventListener('click', hideCircleBtn);
-rangeSpan.textContent = inputTypeRange.value + '%';
+
 // 3 пункт
-const circleChanger = function () {
+function circleChanger() {
   circle.style.width = inputTypeRange.value + '%';
   circle.style.height = inputTypeRange.value + '%';
   rangeSpan.textContent = inputTypeRange.value + '%';
-}; 
+} 
+circleChanger();
 inputTypeRange.addEventListener('input', circleChanger);
   
 
